@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+  </title>
+  <script type="text/javascript">
+    function ArrayToList(arr){
+      this.value = arr[0];
+      if(arr.length != 1) this.rest = new ArrayToList(arr.splice(1));
+      else this.rest = null;
+    }
+    var list = new ArrayToList([1,2,3]);
+    console.log(list);
+  </script>
+</head>
+<body>
+
+</body>
+</html>
