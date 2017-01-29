@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script>
+  //"A car, a man, a maraca"
+    function isPalindrome(str){
+      str=str.toLowerCase().split('').sort().join('').replace(/\s|,|[a-m]{2,}/g,'');
+      return str;
+    }
+    alert(isPalindrome("A car, a man, a maraca"));
+  </script>
+</head>
+<body>
+
+</body>
+</html>
