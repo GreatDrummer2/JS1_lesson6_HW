@@ -4,13 +4,32 @@
   <title>
   </title>
   <script type="text/javascript">
-    function ArrayToList(arr){
+    function ArrayToList (arr){
       this.value = arr[0];
-      if(arr.length != 1) this.rest = new ArrayToList(arr.splice(1));
+      if(arr.length != 1) this.rest = new ArrayToList (arr.splice(1));
       else this.rest = null;
     }
     var list = new ArrayToList([1,2,3]);
-    console.log(list);
+    alert(list);
+
+    /*function ListToArray(list){
+      return Object.keys(list).map(function (keys){
+        if( typeof list[keys] == 'string' || typeof list[keys] == 'number'){
+          return ''+list[keys]+'';}
+        while(typeof list[keys] == 'object'){
+          return Object.keys(list[keys]).map(function(keys2){
+            return  ''+list[keys][keys2]+'';
+          })
+        }
+         if(list[keys] == 'string' || list[keys] == 'number'){
+          return "" + list[keys] +"";
+        } 
+        while(list[keys] == 'object'){
+          return Object.keys(list[keys]).map(function )
+        }
+      })
+    }
+    console.log(ListToArray(list));*/
   </script>
 </head>
 <body>
