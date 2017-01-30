@@ -4,11 +4,13 @@
   <title></title>
   <script>
   //"A car, a man, a maraca"
-    function isPalindrome(str){
-      str=str.toLowerCase().split('').sort().join('').replace(/\s|,|[a-m]{2,}/g,'');
-      return str;
+    function isPalindrome(s){
+      s=s.toLowerCase().replace(/\s|,/g,'').split('');s.splice(s.length/2,1);var a=s.splice(0,s.length/2).reverse();return''+a==''+s?true:false;
+      
+      
+      
     }
-    alert(isPalindrome("A car, a man, a maraca"));
+    alert(isPalindrome("levels"));
   </script>
 </head>
 <body>
