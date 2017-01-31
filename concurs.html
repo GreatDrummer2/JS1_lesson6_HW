@@ -4,10 +4,10 @@
   <title></title>
   <script>
   //"A car, a man, a maraca"
-    function isPalindrome(s,c=/\s|,/g,b='',t=true,f=false){
-     s=s.toLowerCase().replace(c,b).split(b);s.splice(s.length/2,1);a=s.splice(0,s.length/2).reverse();return b+a==b+s?t:f;
+    function isPalindrome(s,a,c=''){
+      s=s.toLowerCase().replace(/\W/g,c).split(c);a=c+s;s.reverse();return c+s==a?1:0;
    }
-    alert(isPalindrome("levels"));
+    alert(isPalindrome("A car, a man, a maraca"));
   </script>
 </head>
 <body>
