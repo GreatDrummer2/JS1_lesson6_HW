@@ -12,7 +12,6 @@
     var list = new ArrayToList([1,2,3]);
     console.log(list);
     
-
     function ListToArray(list){
       var arr=[];
       return body(list);
@@ -29,6 +28,14 @@
       }
     }
     console.log(ListToArray(list));
+
+    function prepend(value,list){
+       var a=ListToArray(list);
+       a.push(value);
+       var b = new ArrayToList(a);
+       return b;
+    }
+    console.log(prepend(4,list)); 
   </script>
 </head>
 <body>
