@@ -36,6 +36,13 @@
        return b;
     }
     console.log(prepend(4,list)); 
+
+    function nth(list,num){
+      var a=ListToArray(list);
+      a=a[num-1];
+      return a;
+    }
+    alert(nth(list,2));
   </script>
 </head>
 <body>
