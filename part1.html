@@ -11,25 +11,24 @@
     }
     var list = new ArrayToList([1,2,3]);
     console.log(list);
+    
 
-    /*function ListToArray(list){
-      return Object.keys(list).map(function (keys){
-        if( typeof list[keys] == 'string' || typeof list[keys] == 'number'){
-          return ''+list[keys]+'';}
-        while(typeof list[keys] == 'object'){
-          return Object.keys(list[keys]).map(function(keys2){
-            return  ''+list[keys][keys2]+'';
-          })
+    function ListToArray(list){
+      var arr=[];
+      return body(list);
+      function body(list){
+      Object.keys(list).map(function(keys,i){
+        if(i%2==0){
+           arr.push(list[keys]);
         }
-         if(list[keys] == 'string' || list[keys] == 'number'){
-          return "" + list[keys] +"";
-        } 
-        while(list[keys] == 'object'){
-          return Object.keys(list[keys]).map(function )
+        else if(typeof list[keys] == 'object' && list[keys] !== null){
+          return body(list[keys]);
         }
-      })
+      });
+        return arr;
+      }
     }
-    console.log(ListToArray(list));*/
+    console.log(ListToArray(list));
   </script>
 </head>
 <body>
