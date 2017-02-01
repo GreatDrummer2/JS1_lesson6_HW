@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript">
+    var user = {
+    name: 'Sergey',
+    age: 30,
+    email: 'sergey@gmail.com',
+    friends: ['Sveta', 'Artem']
+    }
+
+    function pick(obj,arr){
+      var obj2 ={};
+      for(var i = 0;i< arr.length;i++){
+        if(obj[arr[i]] != undefined) obj2[arr[i]] = obj[arr[i]];
+      }
+      return obj2;
+    }
+    console.log(pick(user, ['name', 'second-name']));
+    console.log(pick(user, ['name']));
+    console.log(pick(user, ['name', 'friends']));
+  </script>
+</head>
+<body>
+
+</body>
+</html>
